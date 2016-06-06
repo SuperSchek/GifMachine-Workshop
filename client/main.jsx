@@ -14,8 +14,6 @@ Meteor.startup(() => {
   console.log("> Client side code.");
 });
 
-
-<<<<<<< HEAD:client/main.js
 Template.desktop.events({
     'click form': function(event){
         event.preventDefault();
@@ -24,10 +22,9 @@ Template.desktop.events({
         console.log("√ Image uploaded.");
     }
 });
-=======
+
 Template.mobiel.helpers({
     'gifLink': function(){
         return GifBase.findOne().gif;
     }
 });
->>>>>>> 22c8581202bd22d238476c79a9f04cf0bc386c66:client/main.jsx
