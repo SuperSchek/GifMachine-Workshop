@@ -5,6 +5,7 @@
 <body>
   <h1>Welcome to GifMachine!</h1>
   {{> desktop}}
+{{> mobiel}}
 </body>
 
 <template name="desktop">
@@ -15,11 +16,6 @@
   </form>
 </template>
 <template name="mobiel">
-
-    <div id="mobiel-container">
-
+    <div id="mobiel-container" style="background:url('{{gifLink}}');">Test
     </div>
-    <style>
-        #mobiel-container{background:url("{{gifLink}}");background-size:cover;}
-    </style>
 </template>

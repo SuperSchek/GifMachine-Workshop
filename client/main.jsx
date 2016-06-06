@@ -15,7 +15,7 @@ Meteor.startup(() => {
 });
 
 Template.desktop.events({
-    'click form': function(event){
+    'submit form': function(event){
         event.preventDefault();
         formUrl = document.getElementById('formUrl').value;
         GifBase.insert({url: formUrl});
@@ -25,6 +25,6 @@ Template.desktop.events({
 
 Template.mobiel.helpers({
     'gifLink': function(){
-        return GifBase.findOne().gif;
+        return GifBase.findOne().url;
     }
 });
