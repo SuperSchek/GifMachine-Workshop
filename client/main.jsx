@@ -15,13 +15,19 @@ Meteor.startup(() => {
 });
 
 Template.desktop.events({
-    'click form': function(event){
+    'submit form': function(event){
         event.preventDefault();
         formUrl = document.getElementById('formUrl').value;
         GifBase.insert({url: formUrl});
         console.log("√ Image uploaded.");
     }
 });
+
+Template.desktop.helpers({
+  'url': function () {
+        return GifBase.findOne().url;
+    }
+})
 
 Template.mobiel.helpers({
     'gifLink': function(){
