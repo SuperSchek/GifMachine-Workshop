@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import {database} from '../db/main.js';
+import {database} from '../db/main.jsx';
 
 isMobile = Boolean;
 
@@ -15,6 +15,7 @@ Meteor.startup(() => {
 });
 
 
+<<<<<<< HEAD:client/main.js
 Template.desktop.events({
     'click form': function(event){
         event.preventDefault();
@@ -23,3 +24,10 @@ Template.desktop.events({
         console.log("√ Image uploaded.");
     }
 });
+=======
+Template.mobiel.helpers({
+    'gifLink': function(){
+        return GifBase.findOne().gif;
+    }
+});
+>>>>>>> 22c8581202bd22d238476c79a9f04cf0bc386c66:client/main.jsx
