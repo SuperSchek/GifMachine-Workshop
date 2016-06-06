@@ -23,6 +23,12 @@ Template.desktop.events({
     }
 });
 
+Template.desktop.helpers({
+  'url': function () {
+        return GifBase.findOne().url;
+    }
+})
+
 Template.mobiel.helpers({
     'gifLink': function(){
         return GifBase.findOne().url;
