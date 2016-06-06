@@ -14,9 +14,19 @@
     <input type="text" name="url" id="formUrl"><br>
     <input type="submit" value="Upload">
   </form>
-  <img src="{{url}}">
+
+  <div id="gifboard">
+  {{#each gif}}
+    {{> gifDesktop}}
+  {{/each}}
+</div>
 </template>
+
 <template name="mobiel">
     <div id="mobiel-container" style="background:url('{{gifLink}}');">Test
     </div>
+</template>
+
+<template name="gifDesktop">
+  <img src="{{url}}">
 </template>

@@ -1,1 +1,6 @@
 #mobiel-container{background-size:cover;width:400px;height:400px;}
+
+#gifboard img{
+  height: 100px;
+  width: auto;
+}

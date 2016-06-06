@@ -14,6 +14,29 @@ Meteor.startup(() => {
   console.log("> Client side code.");
 });
 
+//
+// function onoff(id) {
+//                 if (document.getElementById(id).value != selectedAnswer) {
+//                     selectedAnswer = document.getElementById(id).value;
+//                     var myAns = document.getElementById(id).innerHTML;
+//                     var curId = QuestionsMeta.findOne().current;
+//                     var correctAns = QuizQuestions.findOne({"_id": curId}).answers[3].answer;
+//
+//                     if (myAns == correctAns) {
+//                         timeScore = document.getElementById('timeNumber').innerHTML;
+//                         scored = parseInt(timeScore);
+//                     }
+//                 }
+//             }
+
+Template.gifDesktop.events({
+  'click img': function(event){
+    event.preventDefault();
+
+    console.log(">", this.url);
+  }
+})
+
 Template.desktop.events({
     'submit form': function(event){
         event.preventDefault();
@@ -24,9 +47,9 @@ Template.desktop.events({
 });
 
 Template.desktop.helpers({
-  'url': function () {
-        return GifBase.findOne().url;
-    }
+  'gif': function () {
+      return GifBase.find();
+  }
 })
 
 Template.mobiel.helpers({
