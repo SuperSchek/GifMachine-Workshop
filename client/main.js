@@ -13,3 +13,13 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 Meteor.startup(() => {
   console.log("> Client side code.");
 });
+
+
+Template.desktop.events({
+    'click form': function(event){
+        event.preventDefault();
+        formUrl = document.getElementById('formUrl').value;
+        GifBase.insert({url: formUrl});
+        console.log("√ Image uploaded.");
+    }
+});

@@ -3,5 +3,14 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Welcome to GifMachine!</h1>
+  {{> desktop}}
 </body>
+
+<template name="desktop">
+  <form>
+    Gif url:<br>
+    <input type="text" name="url" id="formUrl"><br>
+    <input type="submit" value="Upload">
+  </form>
+</template>
