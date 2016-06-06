@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import {database} from '../db/main.js';
+import {database} from '../db/main.jsx';
 
 isMobile = Boolean;
 
@@ -12,4 +12,11 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 Meteor.startup(() => {
   console.log("> Client side code.");
+});
+
+
+Template.mobiel.helpers({
+    'gifLink': function(){
+        return GifBase.findOne().gif;
+    }
 });
