@@ -28,13 +28,12 @@
   {{#each gif}}
     {{> gifDesktop}}
   {{/each}}
-      {{> mobiel}}
 </div>
 </template>
 
 <template name="mobiel">
     <img id="img" src="{{url}}"/>
-    <div id="mobiel-container" style="background:url('{{gifLink}}');"></div>
+    <div id="mobiel-container" style="background:url('{{gifLink}}') no-repeat center center fixed;"></div>
 
 </template>
 
