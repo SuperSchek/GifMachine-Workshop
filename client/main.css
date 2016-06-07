@@ -3,4 +3,5 @@
 #gifboard img{
   height: 100px;
   width: auto;
+  border: 2px solid white;
 }
