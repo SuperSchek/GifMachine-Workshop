@@ -1,4 +1,4 @@
-#mobiel-container{background-size:cover;width:400px;height:400px;}
+#mobiel-container{width:100%;height:400px;background: red;background-size:cover;}
 
 #gifboard img{
   height: 100px;
