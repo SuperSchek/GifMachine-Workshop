@@ -32,6 +32,13 @@ Template.desktop.events({
     }
 });
 
+Template.gifDesktop.events({
+  'click a': function(event) {
+    event.preventDefault();
+    GifBase.remove({_id: this._id}, {url: this.url});
+  }
+})
+
 Template.desktop.helpers({
   'gif': function () {
       return GifBase.find();
