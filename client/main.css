@@ -1,7 +1,20 @@
-html{height:100%;width:100%;margin:0;padding:0;}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400italic,700);
+@font-face {font-family:FontAwesome;src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/FontAwesome.otf") format("opentype");}
+html{background:#2133AD;height:100%;width:100%;margin:0;padding:0;font-family: 'Open Sans', sans-serif;}
 body{height:100%;width:100%;margin:0;padding:0;}
 #mobiel-container{width:100%;height:100%;position:absolute;background-size:cover !important;margin:0;padding:0;top:0;}
 #mobiel-container img{height:100%;width:100%;margin:0;padding:0;}
 
-#gifboard img{height: 100px;width: auto;border: 2px solid white;}
-#gifboard {height:auto;}
+#container{width:30%;height:100%;position:relative;margin:0 auto;}
+
+#gifboard img{height: 100px;width: auto;border: 2px solid white;border-radius: 3px;}
+#gifboard img:active{border:2px solid #D0021B;}
+#gifboard {overflow:scroll;height:65%;float:left;position:relative;background:rgba(0,0,0,0.2);padding:20px;width:425px;transform: translate(-50%, 0)!important;left:50%;border-radius:5px;}
+
+#upload-card {z-index:100;transform: translate(-50%, 0)!important;left:50%;margin-top:7%;font-family: 'Montserrat', sans-serif;width:auto;height:auto;padding:20px;background:#fff;position:relative;float:left;border-radius: 5px;box-shadow: 0 10px 50px 0 rgba(0,0,0,0.5);}
+#upload-card form {position:relative;float:left;height:auto;}
+#upload-card form input {width:425px;border:none;background:rgba(0,0,0,0.1);color:#313131;border-radius: 5px;padding:10px;font-size:14pt;margin:20px 0 0 0;}
+#upload-card form button {margin-top:20px;height:50px;padding: 2% 0;width:100%;font-weight:bold;background-color:#D0021B;border:none;color: white;text-align: center;text-decoration: none;display: block;font-size: 24px;border-radius: 5px;float:left;position:relative;}
+::-webkit-input-placeholder {color: #b1b1b1;padding:0 0 5px 0;font-size: 12pt;font-family: 'Montserrat', sans-serif;}
+.gif{position:relative;float:left;text-align: center;color:#fff;margin:10px;}
+.gif a{color:#fff;text-decoration: none;}

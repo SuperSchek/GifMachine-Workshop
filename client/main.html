@@ -6,29 +6,31 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 
-<body>
-</body>
+<body></body>
 
 <template name="desktop">
-  <form>
-    Gif url:<br>
-    <input type="text" name="url" id="formUrl"><br>
-    <input type="submit" class="test" value="Upload">
-      <script>
-          $(document).ready(function(){
-              $('.test').prop('disabled',true);
-              $('#formUrl').keyup(function(){
-                  $('.test').prop('disabled', this.value == "" ? true : false);
-              })
-          });
-      </script>
-  </form>
-
-  <div id="gifboard">
-  {{#each gif}}
-    {{> gifDesktop}}
-  {{/each}}
-</div>
+    <div id="container">
+        <div id="upload-card">
+            <form>
+                Voeg een GIF toe:<br>
+                <input type="text" name="url" id="formUrl" placeholder="GIF url"><br>
+                <button type="submit" class="test">Upload</button>
+                <script>
+                    $(document).ready(function(){
+                        $('.test').prop('disabled',true);
+                        $('#formUrl').keyup(function(){
+                            $('.test').prop('disabled', this.value == "" ? true : false);
+                        })
+                    });
+                </script>
+            </form>
+        </div>
+        <div id="gifboard">
+            {{#each gif}}
+                {{> gifDesktop}}
+            {{/each}}
+        </div>
+    </div>
 </template>
 
 <template name="mobiel">
@@ -38,5 +40,7 @@
 </template>
 
 <template name="gifDesktop">
-  <img id="img" src="{{url}}"/> <a href="#">Delete</a>
+    <div class="gif">
+        <img id="img" src="{{url}}"/><br><i class="fa-trash-o"></i><a href="#">delete</a>
+    </div>
 </template>
