@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import './main.html';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 
@@ -6,8 +7,8 @@ clickedImage = String;
 
 
 Meteor.startup(() => {
-  console.log("> Client side code.");
-  GifBase.insert({selectedImage: ""});
+    GifBase = new Mongo.Collection('GifBase');
+    console.log("> Client side code.");
 });
 
 Template.gifDesktop.events({
@@ -23,7 +24,9 @@ Template.gifDesktop.events({
 Template.desktop.events({
     'submit form': function(event){
         event.preventDefault();
+
         formUrl = document.getElementById('formUrl').value;
+        GifBase.insert({selectedImage: ""});
         GifBase.insert({url: formUrl});
         console.log("√ Image uploaded.");
     }

@@ -1,4 +1,6 @@
-import { Meteor } from 'meteor/meteor'; 
+import { Meteor } from 'meteor/meteor';
+
+GifBase = new Mongo.Collection('GifBase');
 
 Meteor.startup(() => {
   console.log("> Server side code.");
