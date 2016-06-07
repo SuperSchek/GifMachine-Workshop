@@ -18,9 +18,10 @@
                 <script>
                     $(document).ready(function(){
                         $('.test').prop('disabled',true);
-                        $('#formUrl').keyup(function(){
+
+                        $('#formUrl').bind("change keyup input",function() {
                             $('.test').prop('disabled', this.value == "" ? true : false);
-                        })
+                        });
                     });
                 </script>
             </form>
