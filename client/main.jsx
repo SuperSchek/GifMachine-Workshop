@@ -24,7 +24,6 @@ Template.gifDesktop.events({
 Template.desktop.events({
     'submit form': function(event){
         event.preventDefault();
-
         formUrl = document.getElementById('formUrl').value;
         GifBase.insert({url: formUrl, selectedImage: ""});
         console.log("√ Image uploaded.");
@@ -34,7 +33,7 @@ Template.desktop.events({
 Template.gifDesktop.events({
   'click a': function(event) {
     event.preventDefault();
-    GifBase.remove({_id: this._id}, {url: this.url});
+    GifBase.remove({_id: this._id});
   }
 })
 
