@@ -26,8 +26,7 @@ Template.desktop.events({
         event.preventDefault();
 
         formUrl = document.getElementById('formUrl').value;
-        GifBase.insert({selectedImage: ""});
-        GifBase.insert({url: formUrl});
+        GifBase.insert({url: formUrl, selectedImage: ""});
         console.log("√ Image uploaded.");
     }
 });

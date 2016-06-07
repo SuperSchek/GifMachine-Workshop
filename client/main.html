@@ -13,7 +13,15 @@
   <form>
     Gif url:<br>
     <input type="text" name="url" id="formUrl"><br>
-    <input type="submit" value="Upload">
+    <input type="submit" class="test" value="Upload">
+      <script>
+          $(document).ready(function(){
+              $('.test').prop('disabled',true);
+              $('#formUrl').keyup(function(){
+                  $('.test').prop('disabled', this.value == "" ? true : false);
+              })
+          });
+      </script>
   </form>
 
   <div id="gifboard">
