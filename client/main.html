@@ -1,11 +1,13 @@
 <head>
-  <title>GifMachine</title>
+    <title>GifMachine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale = 1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 
 <body>
   <h1>Welcome to GifMachine!</h1>
-  {{> desktop}}
-{{> mobiel}}
 </body>
 
 <template name="desktop">
@@ -19,14 +21,14 @@
   {{#each gif}}
     {{> gifDesktop}}
   {{/each}}
+      {{> mobiel}}
 </div>
 </template>
 
 <template name="mobiel">
-    <div id="mobiel-container" style="background:url('{{gifLink}}');">Test
-    </div>
+    <div id="mobiel-container" style="background:url('{{gifLink}}');">Test</div>
 </template>
 
 <template name="gifDesktop">
-  <img id="img" src="{{url}}">
+  <img id="img" src="{{url}}"/>
 </template>
