@@ -22,11 +22,12 @@
                         $('#formUrl').bind("change keyup input",function() {
                             $('.test').prop('disabled', this.value == "" ? true : false);
                         });
-                    });
+                    }); // jQuery dat ervoor zorgt dat als het invoerveld leeg is, de knop niet ingedrukt kan worden.
                 </script>
             </form>
         </div>
         <div id="gifboard">
+            <!-- Voor elk gifje, laat de template "gifDesktop" zien. -->
             {{#each gif}}
                 {{> gifDesktop}}
             {{/each}}
@@ -37,7 +38,7 @@
 <template name="mobiel">
     <img id="img" src="{{url}}"/>
     <div id="mobiel-container" style="background:url('{{gifLink}}') no-repeat center center fixed;"></div>
-
+    <!-- De {{url}} en {{gifLink}} laat de url uit de database van elk gifje in. -->
 </template>
 
 <template name="gifDesktop">
